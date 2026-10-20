@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="一封带着美食与期待的邀请函。期待与你相聚，共享一段美好的时光。">
+  <meta name="theme-color" content="#f5f1e9">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2395472d'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%23fffdf8'/%3E%3C/svg%3E">
+  <link rel="canonical" href="https://caifeng123.github.io/invitation-demo/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="周末小聚 · 邀请函">
+  <meta property="og:description" content="赴一场美好之约。一起品尝美食、聊聊近况，期待与你相见。">
+  <meta property="og:image" content="https://caifeng123.github.io/invitation-demo/thumbnail.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+  <meta property="og:url" content="https://caifeng123.github.io/invitation-demo/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="周末小聚 · 邀请函">
+  <meta name="twitter:description" content="赴一场美好之约，期待与你相见。">
+  <meta name="twitter:image" content="https://caifeng123.github.io/invitation-demo/thumbnail.jpg">
+  <title>周末小聚 · 邀请函示例</title>
+  <style>
+    :root { color-scheme: light; --paper: #fffdf8; --ink: #292d29; --muted: #696d66; --accent: #95472d; --line: #e4e3d9; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding: 44px 24px; color: var(--ink); background: #f5f1e9; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; }
+    a { color: inherit; }
+    .invitation { max-width: 840px; margin: auto; overflow: hidden; border: 1px solid #e8e2d8; border-radius: 16px; background: var(--paper); box-shadow: 0 16px 64px #40351c0a; }
+    .masthead { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 20px 36px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: 2px; }
+    .brand::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    .sample { color: var(--muted); font-size: 11px; letter-spacing: 1px; }
+    .hero { position: relative; min-height: 360px; display: flex; align-items: flex-end; background: #282d27; isolation: isolate; }
+    .hero img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center 56%; }
+    .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, #111a17ed 0%, #111a1780 45%, #111a1700 100%); }
+    .hero-copy { padding: 40px 48px 36px; color: white; }
+    .eyebrow { margin: 0 0 10px; font-size: 11px; letter-spacing: 4px; color: #e7dbbb; }
+    h1 { margin: 0 0 10px; font-family: "Songti SC", "STSong", "SimSun", serif; font-size: 42px; line-height: 1.4; font-weight: 500; letter-spacing: 3px; overflow-wrap: anywhere; }
+    .hero-description { margin: 0; color: #f2f0e9; font-size: 14px; }
+    .body { padding: 38px 48px 32px; }
+    .intro { margin-bottom: 30px; }
+    .salutation { margin: 0 0 10px; color: var(--accent); font-size: 17px; font-weight: 600; }
+    .intro p:last-child { margin: 0; color: var(--muted); font-size: 15px; }
+    .section-heading { display: flex; align-items: baseline; gap: 12px; margin: 0 0 18px; }
+    h2 { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: 1px; }
+    .section-heading span { font-size: 10px; letter-spacing: 2px; color: var(--muted); }
+    .details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    .detail { padding: 18px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+    .detail:nth-child(odd) { padding-right: 16px; }
+    .detail:nth-child(even) { padding-left: 20px; }
+    dt { font-size: 12px; color: var(--muted); margin: 0 0 5px; }
+    dd { margin: 0; font-size: 18px; font-weight: 500; overflow-wrap: anywhere; }
+    dd small { margin-left: 6px; font-size: 12px; color: var(--muted); font-weight: 400; }
+    .location { margin-top: 28px; padding: 22px 24px; border-radius: 10px; background: #f0f1e8; }
+    .location h2 { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+    .location svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .location p { margin: 9px 0 0; font-size: 14px; color: #535a50; overflow-wrap: anywhere; }
+    .closing { padding: 30px 0 4px; text-align: center; }
+    .closing p { margin: 0; font-family: "Songti SC", "STSong", "SimSun", serif; font-size: 20px; letter-spacing: 2px; }
+    .closing span { display: block; margin-top: 6px; font-size: 11px; letter-spacing: 2px; color: var(--muted); }
+    .footer { padding: 16px 36px; border-top: 1px solid var(--line); font-size: 11px; line-height: 1.8; text-align: center; color: var(--muted); }
+    .source { max-width: 840px; margin: 16px auto 0; text-align: center; font-size: 10px; color: #72766f; }
+    .source a { text-underline-offset: 3px; }
+    .source a:hover { color: var(--accent); }
+    .source a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (max-width: 600px) {
+      body { padding: 16px 12px 24px; }
+      .invitation { border-radius: 12px; }
+      .masthead { padding: 16px 22px; }
+      .hero { min-height: 285px; }
+      .hero-copy { padding: 28px 24px; }
+      h1 { font-size: 32px; letter-spacing: 2px; }
+      .hero-description { font-size: 13px; }
+      .body { padding: 28px 24px 26px; }
+      .intro p:last-child { font-size: 14px; }
+      dd { font-size: 16px; }
+      dd small { display: block; margin: 2px 0 0; }
+      .detail:nth-child(even) { padding-left: 12px; }
+      .location { padding: 18px; }
+      .closing p { font-size: 18px; }
+      .footer { padding: 14px 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print { body { padding: 0; background: white; } .invitation { border: 0; box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <main class="invitation">
+    <header class="masthead">
+      <div class="brand">相聚 · 邀请函</div>
+      <span class="sample">样式示例</span>
+    </header>
+    <section class="hero" aria-labelledby="invitation-title">
+      <!-- 公网部署版；hero.jpg 与本文件放在同一目录。 -->
+      <img src="hero.jpg" width="1280" height="853" alt="温暖灯光下的餐桌、美食与酒杯；餐叙氛围示意照片">
+      <div class="hero-copy">
+        <p class="eyebrow">A MOMENT TOGETHER</p>
+        <h1 id="invitation-title">赴一场美好之约</h1>
+        <p class="hero-description">把忙碌留在门外，把相聚留给彼此。</p>
+      </div>
+    </section>
+    <div class="body">
+      <section class="intro" aria-label="邀请正文">
+        <p class="salutation">亲爱的朋友：</p>
+        <p>有些美好，值得坐下来慢慢分享。<br>诚邀你共赴一场周末小聚，一起品尝美食、聊聊近况，度过一段轻松而温暖的时光。</p>
+      </section>
+      <section class="arrangements" aria-labelledby="arrangements-title">
+        <div class="section-heading"><h2 id="arrangements-title">相聚安排</h2><span>THE DETAILS</span></div>
+        <!-- 以下日期、时间、主题、人数均为示例内容，不代表真实预订。 -->
+        <dl class="details">
+          <div class="detail"><dt>日期</dt><dd>2026.11.28<small>星期六</small></dd></div>
+          <div class="detail"><dt>时间</dt><dd>12:00<small>午间相聚</small></dd></div>
+          <div class="detail"><dt>主题</dt><dd>周末小聚</dd></div>
+          <div class="detail"><dt>人数</dt><dd>10 位朋友</dd></div>
+        </dl>
+      </section>
+      <section class="location" aria-labelledby="location-title">
+        <h2 id="location-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>相聚地点 · 待确认</h2>
+        <p>正式邀请将在这里补充餐厅名称、详细地址、停车和交通指引。</p>
+      </section>
+      <section class="closing" aria-label="结语">
+        <p>席间有美味，身边有你。</p>
+        <span>期待与你相见</span>
+      </section>
+    </div>
+    <footer class="footer">这是一份邀请函样式示例。文案、日期、人数及图片均可替换。</footer>
+  </main>
+  <p class="source">示意照片来自 <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a>，并非实际餐厅照片。</p>
+</body>
+</html>
