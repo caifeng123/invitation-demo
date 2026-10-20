@@ -1,131 +1,190 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="一封带着美食与期待的邀请函。期待与你相聚，共享一段美好的时光。">
-  <meta name="theme-color" content="#f5f1e9">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2395472d'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%23fffdf8'/%3E%3C/svg%3E">
-  <link rel="canonical" href="https://caifeng123.github.io/invitation-demo/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:title" content="周末小聚 · 邀请函">
-  <meta property="og:description" content="赴一场美好之约。一起品尝美食、聊聊近况，期待与你相见。">
-  <meta property="og:image" content="https://caifeng123.github.io/invitation-demo/thumbnail.jpg">
-  <meta property="og:image:width" content="600">
-  <meta property="og:image:height" content="600">
-  <meta property="og:url" content="https://caifeng123.github.io/invitation-demo/">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="周末小聚 · 邀请函">
-  <meta name="twitter:description" content="赴一场美好之约，期待与你相见。">
-  <meta name="twitter:image" content="https://caifeng123.github.io/invitation-demo/thumbnail.jpg">
-  <title>周末小聚 · 邀请函示例</title>
-  <style>
-    :root { color-scheme: light; --paper: #fffdf8; --ink: #292d29; --muted: #696d66; --accent: #95472d; --line: #e4e3d9; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; padding: 44px 24px; color: var(--ink); background: #f5f1e9; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; }
-    a { color: inherit; }
-    .invitation { max-width: 840px; margin: auto; overflow: hidden; border: 1px solid #e8e2d8; border-radius: 16px; background: var(--paper); box-shadow: 0 16px 64px #40351c0a; }
-    .masthead { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 20px 36px; }
-    .brand { display: flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: 2px; }
-    .brand::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-    .sample { color: var(--muted); font-size: 11px; letter-spacing: 1px; }
-    .hero { position: relative; min-height: 360px; display: flex; align-items: flex-end; background: #282d27; isolation: isolate; }
-    .hero img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center 56%; }
-    .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, #111a17ed 0%, #111a1780 45%, #111a1700 100%); }
-    .hero-copy { padding: 40px 48px 36px; color: white; }
-    .eyebrow { margin: 0 0 10px; font-size: 11px; letter-spacing: 4px; color: #e7dbbb; }
-    h1 { margin: 0 0 10px; font-family: "Songti SC", "STSong", "SimSun", serif; font-size: 42px; line-height: 1.4; font-weight: 500; letter-spacing: 3px; overflow-wrap: anywhere; }
-    .hero-description { margin: 0; color: #f2f0e9; font-size: 14px; }
-    .body { padding: 38px 48px 32px; }
-    .intro { margin-bottom: 30px; }
-    .salutation { margin: 0 0 10px; color: var(--accent); font-size: 17px; font-weight: 600; }
-    .intro p:last-child { margin: 0; color: var(--muted); font-size: 15px; }
-    .section-heading { display: flex; align-items: baseline; gap: 12px; margin: 0 0 18px; }
-    h2 { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: 1px; }
-    .section-heading span { font-size: 10px; letter-spacing: 2px; color: var(--muted); }
-    .details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; padding: 0; border-top: 1px solid var(--line); }
-    .detail { padding: 18px 0; border-bottom: 1px solid var(--line); min-width: 0; }
-    .detail:nth-child(odd) { padding-right: 16px; }
-    .detail:nth-child(even) { padding-left: 20px; }
-    dt { font-size: 12px; color: var(--muted); margin: 0 0 5px; }
-    dd { margin: 0; font-size: 18px; font-weight: 500; overflow-wrap: anywhere; }
-    dd small { margin-left: 6px; font-size: 12px; color: var(--muted); font-weight: 400; }
-    .location { margin-top: 28px; padding: 22px 24px; border-radius: 10px; background: #f0f1e8; }
-    .location h2 { display: flex; align-items: center; gap: 8px; font-size: 15px; }
-    .location svg { width: 18px; height: 18px; flex-shrink: 0; }
-    .location p { margin: 9px 0 0; font-size: 14px; color: #535a50; overflow-wrap: anywhere; }
-    .closing { padding: 30px 0 4px; text-align: center; }
-    .closing p { margin: 0; font-family: "Songti SC", "STSong", "SimSun", serif; font-size: 20px; letter-spacing: 2px; }
-    .closing span { display: block; margin-top: 6px; font-size: 11px; letter-spacing: 2px; color: var(--muted); }
-    .footer { padding: 16px 36px; border-top: 1px solid var(--line); font-size: 11px; line-height: 1.8; text-align: center; color: var(--muted); }
-    .source { max-width: 840px; margin: 16px auto 0; text-align: center; font-size: 10px; color: #72766f; }
-    .source a { text-underline-offset: 3px; }
-    .source a:hover { color: var(--accent); }
-    .source a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-    @media (max-width: 600px) {
-      body { padding: 16px 12px 24px; }
-      .invitation { border-radius: 12px; }
-      .masthead { padding: 16px 22px; }
-      .hero { min-height: 285px; }
-      .hero-copy { padding: 28px 24px; }
-      h1 { font-size: 32px; letter-spacing: 2px; }
-      .hero-description { font-size: 13px; }
-      .body { padding: 28px 24px 26px; }
-      .intro p:last-child { font-size: 14px; }
-      dd { font-size: 16px; }
-      dd small { display: block; margin: 2px 0 0; }
-      .detail:nth-child(even) { padding-left: 12px; }
-      .location { padding: 18px; }
-      .closing p { font-size: 18px; }
-      .footer { padding: 14px 22px; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-    @media print { body { padding: 0; background: white; } .invitation { border: 0; box-shadow: none; } }
-  </style>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="蔡锋与陈晓玲诚邀你参加结婚答谢宴。2026年11月28日（周六）11:30，上海名粤乘龙·名粤厅，期待与你相见。">
+<meta name="theme-color" content="#fbf5ed">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23fff0e8'/%3E%3Cpath d='M32 48S12 36 12 23a10 10 0 0 1 20-2 10 10 0 0 1 20 2c0 13-20 25-20 25Z' fill='%23ab4c42'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://caifeng123.github.io/invitation-demo/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="蔡锋 &amp; 陈晓玲｜结婚答谢宴">
+<meta property="og:description" content="11月28日（周六）11:30，名粤乘龙·名粤厅，诚邀你来相聚。">
+<meta property="og:image" content="https://caifeng123.github.io/invitation-demo/wedding-thumbnail.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:url" content="https://caifeng123.github.io/invitation-demo/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="蔡锋 &amp; 陈晓玲｜结婚答谢宴">
+<meta name="twitter:description" content="11月28日（周六）11:30，名粤乘龙·名粤厅，期待与你相见。">
+<meta name="twitter:image" content="https://caifeng123.github.io/invitation-demo/wedding-thumbnail.jpg">
+<title>蔡锋 &amp; 陈晓玲｜结婚答谢宴</title>
+<style>
+:root { color-scheme:light; --paper:#fffcf7; --background:#fbf5ed; --ink:#493226; --muted:#816b5e; --accent:#ab4c42; --pink:#f9e8df; --line:#eddfd2; --serif:"Songti SC","Noto Serif CJK SC","STSong","SimSun",serif; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { margin:0; padding:36px 24px 32px; color:var(--ink); background:radial-gradient(ellipse at 10% 5%,#fae8de 0,transparent 42%),var(--background); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.8; }
+a { color:inherit; }
+a,button,summary { touch-action:manipulation; -webkit-tap-highlight-color:transparent; }
+:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
+.invitation { max-width:760px; margin:auto; background:var(--paper); border:1px solid var(--line); border-radius:24px; overflow:hidden; box-shadow:0 16px 70px #6743310b; }
+.masthead { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:19px 28px; font-size:12px; letter-spacing:2px; border-bottom:1px solid var(--line); }
+.occasion { display:inline-flex; align-items:center; gap:9px; }
+.heart { width:15px; height:15px; color:var(--accent); fill:currentColor; flex:0 0 auto; }
+.masthead time { font-size:11px; letter-spacing:1.6px; color:var(--muted); white-space:nowrap; }
+.poster { margin:0; background:#fdf8ef; }
+.poster img { display:block; width:100%; height:auto; aspect-ratio:1; }
+.content { padding:0 52px; }
+.letter { padding:42px 0 37px; text-align:center; }
+.eyebrow { margin:0 0 12px; font-size:11px; letter-spacing:3px; color:var(--accent); }
+h1 { margin:0 0 20px; font-family:var(--serif); font-size:31px; font-weight:600; line-height:1.5; letter-spacing:2px; text-wrap:balance; }
+.message { margin:0; font-size:15px; line-height:2.15; }
+.signature { margin:20px 0 0; font-size:13px; letter-spacing:1.5px; color:var(--muted); }
+.names { color:var(--ink); }
+.divider { display:flex; align-items:center; justify-content:center; gap:16px; }
+.divider::before,.divider::after { content:""; height:1px; width:65px; background:var(--line); }
+.divider .heart { width:13px; height:13px; }
+.arrangements { padding:30px 0 32px; }
+.section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:17px; }
+h2 { margin:0; font-family:var(--serif); font-size:22px; font-weight:600; letter-spacing:1px; line-height:1.5; }
+.section-heading span { font-size:11px; color:var(--muted); letter-spacing:1px; white-space:nowrap; }
+.schedule { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:22px; align-items:center; padding:24px 27px; background:var(--pink); border-radius:16px; }
+.label { margin:0 0 5px; font-size:12px; color:var(--muted); }
+.date { margin:0; font-size:25px; font-weight:600; line-height:1.5; letter-spacing:.5px; }
+.day { margin:2px 0 0; color:var(--muted); font-size:13px; }
+.lunch { padding-left:27px; border-left:1px solid #d7bdb0; text-align:center; }
+.lunch strong { display:block; color:var(--accent); font-size:34px; line-height:1.3; font-weight:600; letter-spacing:.5px; }
+.lunch span { display:block; margin-top:3px; font-size:12px; color:var(--muted); }
+.venue { margin-top:17px; padding:25px 27px; border:1px solid var(--line); border-radius:16px; }
+.venue .label { margin-bottom:8px; }
+.venue-name { display:flex; align-items:center; flex-wrap:wrap; gap:8px 12px; margin:0; font-size:24px; font-weight:600; line-height:1.5; }
+.hall { padding:2px 11px; background:#f8f0e6; border-radius:6px; color:#7c5945; font-size:13px; font-weight:400; letter-spacing:1px; }
+.address { margin:10px 0 0; color:var(--muted); font-size:14px; overflow-wrap:anywhere; }
+.venue-actions { display:flex; gap:10px; margin-top:20px; }
+.button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:10px 17px; border:1px solid var(--accent); border-radius:10px; color:var(--paper); background:var(--accent); font:inherit; font-size:14px; line-height:1.5; text-decoration:none; cursor:pointer; transition:background .15s; }
+.button:hover { background:#923d35; }
+.button svg { width:18px; height:18px; flex-shrink:0; }
+.primary { flex:1; }
+.secondary { flex:0 0 auto; background:transparent; color:var(--accent); border-color:#dcc9bb; }
+.secondary:hover { background:#faf0e7; }
+.copy-feedback { margin:8px 0 -11px; font-size:12px; color:var(--accent); }
+.travel { padding:2px 0 28px; }
+.travel h2 { margin-bottom:18px; }
+.metro { display:flex; gap:14px; align-items:flex-start; padding:20px 0 22px; border-top:1px solid var(--line); }
+.travel-icon { display:flex; align-items:center; justify-content:center; width:35px; height:35px; border-radius:50%; background:#f8eee3; color:#9e6850; flex-shrink:0; }
+.travel-icon svg { width:19px; height:19px; }
+h3 { margin:2px 0 6px; font-size:15px; font-weight:600; line-height:1.7; }
+.metro p { margin:0; color:var(--muted); font-size:13px; line-height:1.9; }
+.metro .metro-lines { margin-bottom:5px; color:var(--ink); font-size:14px; }
+.parking { border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.parking summary { display:flex; align-items:center; gap:14px; padding:18px 0; cursor:pointer; list-style:none; }
+.parking summary::-webkit-details-marker { display:none; }
+.parking-title { flex:1; font-size:15px; font-weight:600; }
+.parking-hint { font-size:12px; color:var(--muted); font-weight:400; }
+.chevron { width:16px; height:16px; color:var(--muted); transition:transform .2s; }
+details[open] .chevron { transform:rotate(180deg); }
+.parking-body { padding:0 0 21px 49px; font-size:13px; color:var(--muted); }
+.parking-body p { margin:0 0 12px; }
+.parking-body strong { color:var(--ink); font-weight:500; }
+.parking-body ol { margin:0; padding-left:19px; }
+.parking-body li { padding-left:3px; margin-bottom:9px; line-height:1.95; }
+.parking-body li:last-child { margin-bottom:0; }
+.restaurant-phone { margin:16px 0 0; font-size:12px; color:var(--muted); text-align:center; }
+.restaurant-phone a { text-underline-offset:4px; white-space:nowrap; display:inline-block; }
+.closing { padding:30px 0 39px; text-align:center; }
+.closing .heart { width:23px; height:23px; color:#c27463; margin-bottom:12px; }
+.closing p { margin:0; font-family:var(--serif); font-size:19px; letter-spacing:1px; line-height:1.9; }
+.closing .see-you { margin-top:12px; font-size:13px; letter-spacing:3px; color:var(--muted); }
+.footer { padding:17px 24px; border-top:1px solid var(--line); text-align:center; font-size:11px; color:var(--muted); letter-spacing:2px; }
+[hidden] { display:none !important; }
+@media(min-width:1100px) { body { padding-top:44px; } }
+@media(max-width:600px) {
+ body { padding:12px 10px 24px; } .invitation { border-radius:18px; } .masthead { padding:15px 20px; font-size:11px; } .masthead time { font-size:10px; }
+ .content { padding:0 24px; } .letter { padding:32px 0 28px; } h1 { font-size:26px; letter-spacing:1px; margin-bottom:16px; }
+ .message { font-size:14px; line-height:2.15; } .signature { font-size:12px; } h2 { font-size:21px; } .section-heading span { display:none; }
+ .arrangements { padding-top:25px; } .schedule { padding:20px; gap:15px; } .date { font-size:22px; } .lunch { padding-left:18px; } .lunch strong { font-size:29px; }
+ .venue { padding:21px 20px; } .venue-name { font-size:23px; } .address { font-size:13px; } .venue-actions { gap:8px; margin-top:18px; } .button { padding:10px 13px; font-size:13px; }
+ .parking-hint { display:none; } .parking-body { padding-left:0; } .closing { padding:23px 0 32px; } .closing p { font-size:18px; } 
+}
+@media(max-width:360px) {
+ .content { padding:0 18px; } .schedule { padding:18px 16px; gap:10px; } .date { font-size:20px; } .lunch { padding-left:13px; } .lunch strong { font-size:27px; }
+ .venue { padding:20px 16px; } .venue-actions { flex-direction:column; } 
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button,.chevron { transition:none; } }
+@media print { body { padding:0; background:white; } .invitation { box-shadow:none; border:0; } .venue-actions { display:none; } }
+</style>
 </head>
 <body>
-  <main class="invitation">
-    <header class="masthead">
-      <div class="brand">相聚 · 邀请函</div>
-      <span class="sample">样式示例</span>
-    </header>
-    <section class="hero" aria-labelledby="invitation-title">
-      <!-- 公网部署版；hero.jpg 与本文件放在同一目录。 -->
-      <img src="hero.jpg" width="1280" height="853" alt="温暖灯光下的餐桌、美食与酒杯；餐叙氛围示意照片">
-      <div class="hero-copy">
-        <p class="eyebrow">A MOMENT TOGETHER</p>
-        <h1 id="invitation-title">赴一场美好之约</h1>
-        <p class="hero-description">把忙碌留在门外，把相聚留给彼此。</p>
-      </div>
-    </section>
-    <div class="body">
-      <section class="intro" aria-label="邀请正文">
-        <p class="salutation">亲爱的朋友：</p>
-        <p>有些美好，值得坐下来慢慢分享。<br>诚邀你共赴一场周末小聚，一起品尝美食、聊聊近况，度过一段轻松而温暖的时光。</p>
-      </section>
-      <section class="arrangements" aria-labelledby="arrangements-title">
-        <div class="section-heading"><h2 id="arrangements-title">相聚安排</h2><span>THE DETAILS</span></div>
-        <!-- 以下日期、时间、主题、人数均为示例内容，不代表真实预订。 -->
-        <dl class="details">
-          <div class="detail"><dt>日期</dt><dd>2026.11.28<small>星期六</small></dd></div>
-          <div class="detail"><dt>时间</dt><dd>12:00<small>午间相聚</small></dd></div>
-          <div class="detail"><dt>主题</dt><dd>周末小聚</dd></div>
-          <div class="detail"><dt>人数</dt><dd>10 位朋友</dd></div>
-        </dl>
-      </section>
-      <section class="location" aria-labelledby="location-title">
-        <h2 id="location-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>相聚地点 · 待确认</h2>
-        <p>正式邀请将在这里补充餐厅名称、详细地址、停车和交通指引。</p>
-      </section>
-      <section class="closing" aria-label="结语">
-        <p>席间有美味，身边有你。</p>
-        <span>期待与你相见</span>
-      </section>
-    </div>
-    <footer class="footer">这是一份邀请函样式示例。文案、日期、人数及图片均可替换。</footer>
-  </main>
-  <p class="source">示意照片来自 <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a>，并非实际餐厅照片。</p>
-</body>
-</html>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+ <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-9-5.3-9-12A5.2 5.2 0 0 1 12 5.4 5.2 5.2 0 0 1 21 9c0 6.7-9 12-9 12Z"></path></symbol>
+ <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+ <symbol id="metro" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="15" rx="4"></rect><path d="M5 10h14M8 21l2-3m6 3-2-3M9 14h.01M15 14h.01"></path></symbol>
+ <symbol id="car" viewBox="0 0 24 24"><path d="m5 8 2-5h10l2 5M4 8h16v9H4zM7 17v3m10-3v3M7 12h.01M17 12h.01"></path></symbol>
+ <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V4H4v12h4"></path></symbol>
+</svg>
+<main class="invitation">
+ <header class="masthead"><span class="occasion"><svg class="heart" aria-hidden="true"><use href="#heart"></use></svg>结婚答谢宴</span><time datetime="2026-11-28">2026 · 11 · 28</time></header>
+ <figure class="poster"><img src="wedding-poster.jpg" width="1254" height="1254" fetchpriority="high" alt="蔡锋与陈晓玲的婚礼插画邀请函：我们结婚啦！欢迎来到我们的答谢宴。2026年11月28日11:30，名粤乘龙·名粤厅，上海市普陀区曹杨路1660号三楼。"></figure>
+ <div class="content">
+  <section class="letter" aria-labelledby="invitation-title">
+   <p class="eyebrow">一份喜悦 · 一席相聚</p><h1 id="invitation-title">我们结婚啦！</h1>
+   <p class="message">感谢你一路以来的关心与陪伴。<br>想借这一场答谢宴，<br>与你分享我们的喜悦，也好好聚一聚。<br>11月28日，期待与你相见。</p>
+   <p class="signature"><span class="names">蔡锋 &amp; 陈晓玲</span> 敬邀</p>
+  </section>
+  <div class="divider" aria-hidden="true"><svg class="heart"><use href="#heart"></use></svg></div>
+  <section class="arrangements" aria-labelledby="arrangements-title">
+   <div class="section-heading"><h2 id="arrangements-title">相聚的时间与地点</h2><span>喜宴相邀</span></div>
+   <div class="schedule"><div><p class="label">宴会日期</p><p class="date"><time datetime="2026-11-28">2026.11.28</time></p><p class="day">星期六</p></div><div class="lunch"><strong><time datetime="2026-11-28T11:30:00+08:00">11:30</time></strong><span>午宴开席</span></div></div>
+   <div class="venue" id="venue">
+    <p class="label">宴会地点</p><p class="venue-name">名粤乘龙<span class="hall">名粤厅</span></p><p class="address" id="venue-address">上海市普陀区曹杨路1660号三楼</p>
+    <div class="venue-actions">
+     <a class="button primary" href="https://ditu.amap.com/ssr/place/B0K6056GCS?id=B0K6056GCS" target="_blank" rel="noopener noreferrer"><svg fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><use href="#pin"></use></svg>导航到餐厅</a>
+     <button class="button secondary" id="copy-address" type="button" hidden><svg fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><use href="#copy"></use></svg>复制地址</button>
+    </div><p class="copy-feedback" id="copy-feedback" aria-live="polite" hidden></p>
+   </div>
+  </section>
+  <section class="travel" aria-labelledby="travel-title">
+   <h2 id="travel-title">怎么到这里</h2>
+   <div class="metro"><span class="travel-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#metro"></use></svg></span><div><h3>乘地铁前来</h3><p class="metro-lines">11号线 / 14号线 · 真如站1号口</p><p>从出口左侧的商场入口进入，<br>按指引找到电梯，直达三楼。</p></div></div>
+   <details class="parking" id="parking">
+    <summary><span class="travel-icon"><svg fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#car"></use></svg></span><span class="parking-title">开车与停车指引</span><span class="parking-hint">点击展开</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+    <div class="parking-body"><p><strong>停车入口：礼泉路689弄1—66号，星巴克右手边。</strong></p><ol><li>从入口驶入 <strong>B3停车场</strong>，按照“名粤乘龙”的指引找到 <strong>T2办公楼</strong>。</li><li>乘T2办公楼电梯到一楼，从大厅正门出门后左转，即可看到名粤乘龙。</li><li>再乘餐厅电梯到三楼，前往<strong>名粤厅</strong>。</li></ol></div>
+   </details>
+   <p class="restaurant-phone">问路可联系餐厅：<a href="tel:021-62999777">021-62999777</a></p>
+  </section>
+  <section class="closing" aria-label="结语"><svg class="heart" aria-hidden="true"><use href="#heart"></use></svg><p>喜悦因你的到来，<br>更加圆满。</p><p class="see-you">我们到时见</p></section>
+ </div>
+ <footer class="footer">蔡锋 &amp; 陈晓玲 · 2026.11.28</footer>
+</main>
+
+<script>
+(() => {
+ const button=document.getElementById('copy-address');
+ const feedback=document.getElementById('copy-feedback');
+ const address='名粤乘龙 · 名粤厅，上海市普陀区曹杨路1660号三楼';
+ button.hidden=false;
+ button.addEventListener('click',async () => {
+  let copied=false;
+  if(navigator.clipboard && window.isSecureContext) {
+   try { await navigator.clipboard.writeText(address); copied=true; } catch {}
+  }
+  if(!copied) {
+   const field=document.createElement('textarea');
+   field.value=address; field.readOnly=true;
+   field.style.cssText='position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px';
+   document.body.appendChild(field); field.focus(); field.select(); field.setSelectionRange(0,address.length);
+   try { copied=document.execCommand('copy'); } catch {}
+   field.remove(); button.focus({preventScroll:true});
+  }
+  feedback.hidden=false;
+  feedback.textContent=copied ? '地址已复制，可粘贴到地图中搜索。' : '请长按上方地址文字复制。';
+ });
+ const parking=document.getElementById('parking');
+ const hint=parking.querySelector('.parking-hint');
+ parking.addEventListener('toggle',() => { hint.textContent=parking.open ? '点击收起' : '点击展开'; });
+})();
+</script>
+
+
+</body><div id="codex-browser-sidebar-comments-root" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483647;"></div></html>

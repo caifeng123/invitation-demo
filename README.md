@@ -1,9 +1,9 @@
-# Invitation demo
+# 结婚答谢宴邀请函
 
-A static invitation page with sample copy and an illustrative Unsplash photo.
+蔡锋 & 陈晓玲敬邀。2026年11月28日（周六）11:30，名粤乘龙·名粤厅。
 
-GitHub Pages: https://caifeng123.github.io/invitation-demo/
+网页：https://caifeng123.github.io/invitation-demo/
 
-Publish the main branch from the repository root. All dates, times and guest counts are examples.
+静态HTML页面，包含插画主图、邀请正文、宴会信息、地图地点、复制地址、地铁和停车指引。
 
-The page includes ordinary Open Graph metadata; this does not guarantee a custom WeChat message card. Open the public page inside WeChat and use the top-right share menu to test its default preview. Reliable custom WeChat sharing requires eligible JS-SDK access and URL signing.
+微信分享使用小码“微信内分享卡片”的专用二维码及微信右上角分享菜单。
